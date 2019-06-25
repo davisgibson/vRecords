@@ -1,0 +1,29 @@
+<div class="container">
+    <form method="GET" (ngSubmit)="editCar(f)" #f="ngForm">
+      <p>Name:</p>
+      <input [ngModel]="name" readonly type="text" name="name" >
+      <p>Make: </p>
+      <select *ngIf="promise | async" id="make" required [ngModel]="make" (change)="firstDropDownChanged($event.target.value)" name="make">
+        <option selected>{{make}}</option>
+        <option *ngFor="let make of carMakes">{{make}}</option>
+      </select>
+      <p>Model: </p>
+      <select required [ngModel]="model" name="model">
+          <option selected>{{model}}</option>
+          <option *ngFor="let model of carModels">{{model}}</option>
+      </select>
+      <p>Color: </p>
+      <select required [ngModel]="color" name="color">
+          <option selected>{{color}}</option>
+          <option *ngFor="let color of colors">{{color}}</option>
+      </select>
+      <p>Year:</p>
+      <input [ngModel]="year" required  name="year" type="number">
+      <p>Miles:</p>
+      <input [ngModel]="miles" required name="miles" type="number">
+      <p>Description: </p>
+      <input [ngModel]="description" required name="description" type="text">
+      <button type="submit">Edit</button>
+    </form>
+    <button (click)="deleteCar()">Delete</button>
+  </div>

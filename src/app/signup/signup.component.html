@@ -1,0 +1,10 @@
+<div class="container">
+  <h3>Sign Up</h3>
+    <form method="GET" (ngSubmit)="signUp(f)" #f="ngForm">
+      <p>Username:</p>
+      <input name="username" ngModel type="text">
+      <p>Password:</p>
+      <input name="password" ngModel type="password">
+      <button type="submit">Sign Up</button>
+    </form>
+  </div>

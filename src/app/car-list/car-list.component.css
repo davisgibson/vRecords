@@ -1,0 +1,17 @@
+.container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+.carItem{
+    width: calc(20vw + 50px);
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 25px;
+    text-decoration: none;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: black;
+}

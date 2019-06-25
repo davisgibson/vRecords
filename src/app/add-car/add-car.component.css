@@ -1,0 +1,18 @@
+
+.container{
+    height: calc(15vh + 100px);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+form{
+    border: 1px dotted black;
+}
+input{
+    border: 1px dotted black;
+}
+
+select{
+    border: 1px dotted black;
+}

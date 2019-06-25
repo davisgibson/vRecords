@@ -1,0 +1,15 @@
+.container{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 25px;
+    width: 200px;
+    height: 250px;
+    margin: auto auto;
+}
+input{
+    border: 1px solid black;
+    border-radius: 10px;
+}

@@ -1,0 +1,28 @@
+<div class="container">
+  <form method="GET" (ngSubmit)="submitCar(f)" #f="ngForm">
+    <p>Name:</p>
+    <input required type="text" name="name" ngModel>
+    <p>Make: </p>
+    <select required ngModel (change)="firstDropDownChanged($event.target.value)" name="make">
+      <option value="" disabled selected>select an option</option>
+      <option *ngFor="let make of carMakes">{{make}}</option>
+    </select>
+    <p>Model: </p>
+    <select required ngModel name="model">
+        <option value="" disabled selected>select an option</option>
+        <option *ngFor="let model of carModels">{{model}}</option>
+    </select>
+    <p>Color: </p>
+    <select required ngModel name="color">
+        <option value="" disabled selected>select an option</option>
+        <option *ngFor="let color of colors">{{color}}</option>
+    </select>
+    <p>Year:</p>
+    <input required ngModel name="year" type="number">
+    <p>Miles:</p>
+    <input required ngModel name="miles" type="number">
+    <p>Description: </p>
+    <input required ngModel name="description" type="text">
+    <button type="submit">Add</button>
+  </form>
+</div>
